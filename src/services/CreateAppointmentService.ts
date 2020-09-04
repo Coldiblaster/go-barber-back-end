@@ -15,7 +15,7 @@ class CreateAppointmentService {
 
     const appointmentDate = startOfHour(date);
 
-    const findAppointmentInSameDate = appointmentsRepository.findByDate(
+    const findAppointmentInSameDate = await appointmentsRepository.findByDate(
       appointmentDate,
     );
 
@@ -23,6 +23,7 @@ class CreateAppointmentService {
       throw Error('This appointment is already booked');
     }
 
+    /** .create somente cria a instanca do model */
     const appointment = appointmentsRepository.create({
       provider,
       date: appointmentDate,
