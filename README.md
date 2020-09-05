@@ -67,7 +67,7 @@ $ yarn typeorm migration:revert
 
 ```bash
 # Criar o Banco de Dados
-$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -d postgres
+$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
 
 # Listar as imagens disponíveis no meu repositório local
 $ docker ps
