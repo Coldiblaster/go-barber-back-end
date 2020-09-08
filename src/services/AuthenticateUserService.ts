@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { compare } from 'bcryptjs';
-import { signdi } from 'jsonwebtoken';
+import { sign } from 'jsonwebtoken';
 
 import User from '../models/User';
 
