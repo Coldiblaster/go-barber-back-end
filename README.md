@@ -49,7 +49,7 @@ Passo a passo para executar o Deploy
 
 ## Comandos Importantes :clipboard:
 
-:memo: Knex.JS
+:memo: Typeorm
 
 ```bash
 # Caso precise criar migrations
