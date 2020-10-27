@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  <a href="#introdução">:small_blue_diamond: Introdução</a> 
+  <a href="#introdução">:small_blue_diamond: Introdução</a>
   <a href="#pré-requisitos-warning">:small_blue_diamond: Pré-requisitos</a>
   <a href="#como-rodar-a-aplicação-arrow_forward">:small_blue_diamond: Como rodar a aplicação</a>
   <a href="#como-rodar-os-testes">:small_blue_diamond: Como rodar os testes</a>
@@ -14,17 +14,34 @@
   <a href="#linguagens-dependencias-e-libs-utilizadas-books">:small_blue_diamond: Linguagens, dependencias e libs utilizadas</a>
 </p>
 
-
 ## Introdução
 
+## Funcionalidades
+
+- Existem as funcionalidades macro(Tudo que definimos como tela) e micro (Funcionalidades que estão dentro da tela de macro)
+
+- Temos as seguintes categorias de micro:
+  - RF (Requisitos funcionais): Todas funcionalidades que teremos na macro.
+  - RNF (Requisitos não funcionais)
+  - RN (Regras de negocio)
+
+# Recuperação de senha
+
+# Atualização do perfil
+
+# Painel do prestador
+
+# Agendamento de serviços
 
 ## Pré-requisitos :warning:
+
 - [x] [Docker](https://www.docker.com/get-started)
 - [x] [Node.js](https://nodejs.org/en/download)
 - [x] [Git](https://git-scm.com)
 - [x] [Yarn](https://yarnpkg.com/)
 
 ## Como rodar a aplicação :arrow_forward:
+
 ```bash
 # Clone o repositório
 $ git clone https://github.com/Coldiblaster/go-barber-back-end.git
@@ -39,6 +56,7 @@ $ yarn typeorm migration:run
 # Inicie o Projeto
 $ yarn dev:server
 ```
+
 ## Como rodar os testes
 
 Passo a passo para executar os testes
@@ -59,7 +77,7 @@ $ yarn typeorm migration:create -n NomeTabela
 $ yarn typeorm migration:run
 
 # Caso precise reverter uma migration (Reverte a ultima migration executada)
-$ yarn typeorm migration:revert     
+$ yarn typeorm migration:revert
 
 ```
 
