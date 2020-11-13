@@ -112,7 +112,7 @@ $ cd go-barber-back-end
 # Instale as dependências
 $ yarn
 # Inicie o Banco de Dados
-$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -d postgres
+$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
 # Rode as migrations
 $ yarn typeorm migration:run
 # Inicie o Projeto
