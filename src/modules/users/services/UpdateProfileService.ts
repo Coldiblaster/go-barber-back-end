@@ -20,7 +20,7 @@ class UpdateProfileService {
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
 
-    @inject('StorageProvider')
+    @inject('HashProvider')
     private hashProvider: IHashProvider,
   ) {}
 
@@ -59,7 +59,7 @@ class UpdateProfileService {
       );
 
       if (!checkOldPassword) {
-        throw new AppError('Old password does not match');
+        throw new AppError('Old password does not match.');
       }
 
       user.password = await this.hashProvider.generateHash(password);
