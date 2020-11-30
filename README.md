@@ -32,8 +32,10 @@ $ git clone https://github.com/Coldiblaster/go-barber-back-end.git
 $ cd go-barber-back-end
 # Instale as dependências
 $ yarn
-# Inicie o Banco de Dados
+# Crie o Banco de Dados relacional
 $ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
+# Crie o Banco de Dados não relacional
+$ docker run --name mongodb -p 27017:27017 -d -t mongo
 # Rode as migrations
 $ yarn typeorm migration:run
 # Inicie o Projeto
