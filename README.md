@@ -16,6 +16,88 @@
 
 ## Introdução
 
+## Pré-requisitos :warning:
+
+- [x] [Docker](https://www.docker.com/get-started)
+- [x] [Node.js](https://nodejs.org/en/download)
+- [x] [Git](https://git-scm.com)
+- [x] [Yarn](https://yarnpkg.com/)
+
+## Como rodar a aplicação :arrow_forward:
+
+```bash
+# Clone o repositório
+$ git clone https://github.com/Coldiblaster/go-barber-back-end.git
+# Entre na pasta
+$ cd go-barber-back-end
+# Instale as dependências
+$ yarn
+# Crie o Banco de Dados relacional
+$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
+# Crie o Banco de Dados não relacional
+$ docker run --name mongodb -p 27017:27017 -d -t mongo
+# Rode as migrations
+$ yarn typeorm migration:run
+# Inicie o Projeto
+$ yarn dev:server
+```
+
+## Como rodar os testes
+
+Passo a passo para executar os testes
+
+## Deploy :rocket:
+
+Passo a passo para executar o Deploy
+
+## Comandos Importantes :clipboard:
+
+:memo: Typeorm
+
+```bash
+# Caso precise criar migrations
+$ yarn typeorm migration:create -n NomeTabela
+
+# Rode as migrations
+$ yarn typeorm migration:run
+
+# Caso precise reverter uma migration (Reverte a ultima migration executada)
+$ yarn typeorm migration:revert
+
+```
+
+:whale: Docker
+
+```bash
+# Criar o Banco de Dados
+$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
+
+# Listar as imagens disponíveis no meu repositório local
+$ docker ps
+
+# Parar banco
+$ docker stop gostack_postgres
+
+# Inicar banco
+$ docker start gostack_postgres
+
+# Limpar as imagens e contêineres;
+$ docker system prune -a
+
+# Dicas de comandos para o docker:
+$ https://woliveiras.com.br/posts/comandos-mais-utilizados-no-docker/
+```
+
+:octocat: Git
+
+```bash
+# Clonar o repositório
+$ git clone https://github.com/Coldiblaster/go-barber-back-end.git
+
+# Atualize o repositório com os arquivos atualizados da branch master
+$ git pull
+```
+
 ## Funcionalidades
 
 - Existem as funcionalidades macro(Tudo que definimos como tela) e micro (Funcionalidades que estão dentro da tela de macro)
@@ -94,86 +176,6 @@
 - O usuário não pode agendar em um horário já ocupado;
 - O usuário não pode agendar em um horário que já passou;
 - O usuário não pode agendar serviços consigo mesmo;
-
-## Pré-requisitos :warning:
-
-- [x] [Docker](https://www.docker.com/get-started)
-- [x] [Node.js](https://nodejs.org/en/download)
-- [x] [Git](https://git-scm.com)
-- [x] [Yarn](https://yarnpkg.com/)
-
-## Como rodar a aplicação :arrow_forward:
-
-```bash
-# Clone o repositório
-$ git clone https://github.com/Coldiblaster/go-barber-back-end.git
-# Entre na pasta
-$ cd go-barber-back-end
-# Instale as dependências
-$ yarn
-# Inicie o Banco de Dados
-$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
-# Rode as migrations
-$ yarn typeorm migration:run
-# Inicie o Projeto
-$ yarn dev:server
-```
-
-## Como rodar os testes
-
-Passo a passo para executar os testes
-
-## Deploy :rocket:
-
-Passo a passo para executar o Deploy
-
-## Comandos Importantes :clipboard:
-
-:memo: Typeorm
-
-```bash
-# Caso precise criar migrations
-$ yarn typeorm migration:create -n NomeTabela
-
-# Rode as migrations
-$ yarn typeorm migration:run
-
-# Caso precise reverter uma migration (Reverte a ultima migration executada)
-$ yarn typeorm migration:revert
-
-```
-
-:whale: Docker
-
-```bash
-# Criar o Banco de Dados
-$ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
-
-# Listar as imagens disponíveis no meu repositório local
-$ docker ps
-
-# Parar banco
-$ docker stop gostack_postgres
-
-# Inicar banco
-$ docker start gostack_postgres
-
-# Limpar as imagens e contêineres;
-$ docker system prune -a
-
-# Dicas de comandos para o docker:
-$ https://woliveiras.com.br/posts/comandos-mais-utilizados-no-docker/
-```
-
-:octocat: Git
-
-```bash
-# Clonar o repositório
-$ git clone https://github.com/Coldiblaster/go-barber-back-end.git
-
-# Atualize o repositório com os arquivos atualizados da branch master
-$ git pull
-```
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
