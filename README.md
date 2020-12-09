@@ -36,6 +36,8 @@ $ yarn
 $ docker run --name gostack_gobarber -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
 # Crie o Banco de Dados não relacional
 $ docker run --name mongodb -p 27017:27017 -d -t mongo
+# Crie o Banco de Dados para cache
+$ docker run --name redis -p 6379:6379 -d -t redis:alpine
 # Rode as migrations
 $ yarn typeorm migration:run
 # Inicie o Projeto
