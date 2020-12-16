@@ -8,4 +8,7 @@ const providers = {
   disk: DiskStorageProvider,
 };
 
-container.registerSingleton<IStorageProvider>('MailProvider', providers.disk);
+container.registerSingleton<IStorageProvider>(
+  'StorageProvider',
+  providers.disk,
+);
